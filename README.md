@@ -1,56 +1,54 @@
-# 🚀 Chat App - Frontend
+# 🚀 Chat App - Backend
 
-This is the **frontend** of a real-time chat application built with **React.js, Tailwind CSS, and Socket.io**. It provides a seamless messaging experience with WebSocket support for live chat.
-
-⚠️ **Note:** This project is a **weekend learning project**, primarily focusing on learning **concepts and technologies**. The **UI/UX will be updated in future** with better designs and enhancements.
+This is the **backend** of a real-time chat application built with **Node.js, Express, MongoDB, and Socket.io**. It handles authentication, real-time messaging, and chat history storage.
 
 ## 🛠️ Tech Stack
 
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/TailwindCSS-0EA5E9?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
+![Express.js](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge)
+![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
 ![Socket.io](https://img.shields.io/badge/Socket.io-010101?style=for-the-badge&logo=socket.io&logoColor=white)
+![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white)
 
 ## 📂 Project Structure
 
 ```
-frontend/
+backend/
 │── src/
-│   ├── components/       # Reusable components (ChatBox, Sidebar, etc.)
-│   ├── context/          # AuthContext (User Authentication)
-│   ├── pages/            # Main pages (Login, ChatRoom)
-│   ├── services/         # API Calls (auth, chat history, etc.)
-│   ├── hooks/            # Custom React hooks
-│   ├── App.jsx           # Main Application
-│   ├── main.jsx          # Entry point (ReactDOM)
-│── public/               # Static assets
-│── package.json          # Dependencies
-│── vite.config.js        # Vite Configuration
-│── README.md             # Documentation
+│   ├── config/          # Configuration files (DB, CORS, etc.)
+│   ├── controllers/     # API Controllers (Auth, Chat, etc.)
+│   ├── models/          # MongoDB Models (User, Message, etc.)
+│   ├── routes/          # Express Routes (Auth, Chat)
+│   ├── middleware/      # Authentication & Validation Middleware
+│   ├── services/        # Business Logic (Token handling, chat services)
+│   ├── sockets/         # Socket.io WebSocket Events
+│   ├── server.js        # Entry point (Express & Socket.io setup)
+│── .env                 # Environment Variables
+│── package.json         # Dependencies
+│── README.md            # Documentation
 ```
 
 ## 🚀 Features
 
+- ✅ **User Authentication** (JWT-based Login & Signup)
 - ✅ **Real-time Messaging** using WebSockets (Socket.io)
-- ✅ **Authentication System** (JWT-based Login & Signup)
-- ✅ **Chat Rooms** (Multiple chat channels)
-- ✅ **Beautiful UI** with Tailwind CSS
-- ✅ **Responsive Design** (Works on all devices)
-- ✅ **Persistent Login** (Stored in localStorage)
-- ✅ **Error Handling** (Friendly messages & validation)
+- ✅ **MongoDB Chat History Storage**
+- ✅ **Secure REST API** with Token-based Auth
+- ✅ **Multi-Room Chat Support**
+- ✅ **Error Handling & Validation**
 
 ## ⚡ Installation & Setup
 
 ### 🔧 Prerequisites
 - Node.js (>= 16)
-- Vite
+- MongoDB
 - NPM / Yarn
 
 ### 📥 Clone the repository
 
 ```sh
-git clone https://github.com/your-username/chat-app-frontend.git
-cd chat-app-frontend
+git clone https://github.com/your-username/chat-app-backend.git
+cd chat-app-backend
 ```
 
 ### 📦 Install dependencies
@@ -64,18 +62,21 @@ npm install
 Create a **.env** file in the root directory and add:
 
 ```
-VITE_API_URL=http://localhost:5000
+PORT=5000
+MONGO_URI=mongodb://localhost:27017/chatapp
+JWT_SECRET=your_secret_key
+CLIENT_URL=http://localhost:5173
 ```
 
-### 🚀 Run the project
+### 🚀 Run the server
 
 ```sh
-npm run dev
+npm start
 ```
 
-Then open **http://localhost:5173/** in your browser.
+Server will be running on **http://localhost:5000**.
 
-## 🔗 API Endpoints (Backend Integration)
+## 🔗 API Endpoints
 
 | Method | Endpoint              | Description                      |
 |--------|-----------------------|----------------------------------|
@@ -106,8 +107,8 @@ Contributions are welcome! Fork the repo, make changes, and submit a PR.
 
 ---
 
-🔗 **Backend Repository:** [Chat App Backend](https://github.com/your-username/chat-app-backend)
+🔗 **Frontend Repository:** [Chat App Frontend](https://github.com/your-username/chat-app-frontend)
 
-📧 **Contact:** palakbosw@gmail.com
+📧 **Contact:** palakbosw@example.com
 
 🌟 **Star this repo if you like it!**

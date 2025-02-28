@@ -47,14 +47,14 @@ backend/
 ### 📥 Clone the repository
 
 ```sh
-git clone https://github.com/your-username/chat-app-backend.git
-cd chat-app-backend
+  git clone https://github.com/your-username/chat-app-backend.git
+  cd chat-app-backend
 ```
 
 ### 📦 Install dependencies
 
 ```sh
-npm install
+  npm install
 ```
 
 ### 🛠️ Configure environment variables
@@ -71,7 +71,7 @@ CLIENT_URL=http://localhost:5173
 ### 🚀 Run the server
 
 ```sh
-npm start
+  npm start
 ```
 
 Server will be running on **http://localhost:5000**.
@@ -107,8 +107,8 @@ Contributions are welcome! Fork the repo, make changes, and submit a PR.
 
 ---
 
-🔗 **Frontend Repository:** [Chat App Frontend](https://github.com/your-username/chat-app-frontend)
+🔗 **Frontend Repository:** [Chat App Frontend](https://github.com/palakbhushan/chat-app-frontend)
 
-📧 **Contact:** palakbosw@example.com
+📧 **Contact:** palakbosw@gmail.com
 
 🌟 **Star this repo if you like it!**
